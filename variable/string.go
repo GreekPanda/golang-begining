@@ -20,4 +20,8 @@ func main()  {
 			 }`
 
 	fmt.Println(c)
+
+	var d = "hello" + " world"
+	var e = d + "got it"
+	fmt.Println(e)
 }
