@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 func main()  {
@@ -33,7 +34,62 @@ func main()  {
 	fmt.Printf("n2=%v, n3=%v\n", n2, n3)
 
 	n4 = int8(n1) + 127
-	n3 = int8(n1) + 127
+	n3 = int8(n1) + 127 //more than 127 is not allowed
 	fmt.Printf("n4=%v\n", n4)
+
+
+	var num5 int64 = 123
+	var num6 float64 = 123.123
+	var num7 bool = true
+	var num8 byte = 'a'
+
+	var str string=""
+	var result string = ""
+
+	//Use method1 to concat
+	str = fmt.Sprintf("%d", num5)
+	fmt.Printf("%s\n", str)
+	result += str
+
+	str = fmt.Sprintf("%f", num6)
+	fmt.Printf("%s\n", str)
+	result += str
+
+	str = fmt.Sprintf("%t", num7)
+	fmt.Printf("%s\n", str)
+	result += str
+
+	str = fmt.Sprintf("%c", num8)
+	fmt.Printf("%s\n", str)
+	result += str
+
+	fmt.Printf("%q\n", result)
+
+
+	//方式二 strconv
+	var str1 string = ""
+	str1 = strconv.FormatInt(num5, 10)
+	fmt.Println(str1)
+
+	str1 = strconv.FormatInt(num5, 2)
+	fmt.Println(str1)
+
+	str1 = strconv.FormatInt(num5, 16)
+	fmt.Println(str1)
+	
+
+	str1 = strconv.FormatFloat(num6, 'f', 2, 64)
+	fmt.Println(str1)
+
+
+	str1 = strconv.FormatBool(num7)
+	fmt.Println(str1)
+
+
+	//str3Int64 convert into default value
+	var str3 string = "hello"
+	var str3Int64 int64 = 1111
+	str3Int64, _ = strconv.ParseInt(str3, 10, 64)
+	fmt.Println(str3Int64) 
 
 }
