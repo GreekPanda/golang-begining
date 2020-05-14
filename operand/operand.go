@@ -39,8 +39,10 @@ func main()  {
 	fmt.Println(n1)
 	n1-- // n1 = n1 - 1 = 11 - 1 = 10
 	fmt.Println(n1)
+
 	//error
 	//fmt.Println(n1++)
+	
 	//error
 	// ++n1
 	// fmt.Println(n1)
