@@ -25,4 +25,25 @@ func main()  {
 	//it depents on what's value of devide
 	var h float64 = 10.0 /4
 	fmt.Println(h)
+
+	//model % 
+	// a % b = a - a / b * b
+	fmt.Println("10%3=", 10 % 3) // 10  -  10 / 3 * 3 = 10 -9 = 1
+	fmt.Println("-10%3=", -10 % 3) // -10 - (-10) / 3 * 3 = -10 + 9 = -1
+	fmt.Println("10%-3=", 10 % -3) // 10 - 10 / (-3) * (-3) = 10 - 9 = 1
+	fmt.Println("-10%-3", -10 % -3) // -10 - (-10) / (-3) * (-3) = -10 - 3 * (-3) = -1
+
+	//++ --
+	var n1 int = 10
+	n1++ // n1 = n1 + 1 = 11
+	fmt.Println(n1)
+	n1-- // n1 = n1 - 1 = 11 - 1 = 10
+	fmt.Println(n1)
+	//error
+	//fmt.Println(n1++)
+	//error
+	// ++n1
+	// fmt.Println(n1)
+	// --n1
+	// fmt.Println(n1)
 }
