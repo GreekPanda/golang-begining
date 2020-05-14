@@ -87,8 +87,19 @@ func printPyrimid()  {
 	}
 }
 
+func nineXnineTable()  {
+	//i标识层数
+	fmt.Println()
+	for i := 1; i <= 9; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Printf("%v X %v  = %v\t", j, i, j * i)
+		} 
+		fmt.Println()
+	}
+}
+
 func main()  {
 	//grade(3, 5)
-	var n int = 20
 	printPyrimid()
+	nineXnineTable()
 }
