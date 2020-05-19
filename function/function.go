@@ -16,7 +16,7 @@ func test(n int)  {
 func test2(n int)  {
 	if n > 2 {
 		n--
-		test(n)
+		test2(n)
 	} else {
 		fmt.Println("output2 n = ", n)
 	}
