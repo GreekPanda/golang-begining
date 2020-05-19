@@ -49,6 +49,29 @@ func test3(n *int)  {
 	*n = 20
 }
 
+func getSum(n1 int, n2 int)  int {
+
+	return n1 + n2
+	
+}
+
+func myFun(funvar func(int, int) int, num1 int , num2 int) int {
+	return funvar(num1, num2)
+}
+
+type funType func(int, int) int
+
+func myFunType(funvar funType, num1 int, num2 int) int {
+	return funvar(num1, num2)
+}
+
+func getSumSub(n1 int, n2 int) (sum int, sub int) {
+
+	sum = n1 + n2
+	sub = n1 - n2
+	return
+}
+
 func main()  {
 	var n int = 4
 	test(n)
@@ -61,9 +84,36 @@ func main()  {
 	ret2 := monkeyEatPeach(11)
 	fmt.Println(ret2)
 	fmt.Println("------------------")
-	//使用指针可修改值，其它的基本类型和数组都是船只
+	//使用指针可修改值，其它的基本类型和数组都是传值
 	num := 30
 	test3(&num)
 	fmt.Println(num)
+
+	//go不支持利用参数不同而说明其重载
+
+	fmt.Println("------------------")
+	sum := getSum
+	//获得函数的内存地址
+	fmt.Println(sum)
+	//传入参数
+	ret3 := sum(10, 20)
+	fmt.Println(ret3)
+
+	fmt.Println("------------------")
+	//函数可以作为形参传入
+	ret4 := myFun(getSum, 50, 60)
+	fmt.Println(ret4)
+
+	fmt.Println("------------------")
+	//type funType func(int, int) int
+
+	ret5 := myFunType(getSum, 200, 50)
+	fmt.Println(ret5)
+
+	fmt.Println("------------------")
+	//支持对返回值命名
+
+	ret6, ret7 := getSumSub(100, 50)
+	fmt.Printf("sum=%v, sub=%v\n", ret6, ret7)
 
 }
