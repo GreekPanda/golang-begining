@@ -13,7 +13,18 @@ func test(n int)  {
 	fmt.Println("output n=", n)
 }
 
+func test2(n int)  {
+	if n > 2 {
+		n--
+		test(n)
+	} else {
+		fmt.Println("output2 n = ", n)
+	}
+}
+
 func main()  {
 	var n int = 4
 	test(n)
+	fmt.Println("------------------")
+	test2(n)
 }
