@@ -13,6 +13,15 @@ func test(n int)  {
 	fmt.Println("output n=", n)
 }
 
+func fib(n int) int  {
+	if n == 0 || n == 1 {
+		return 1
+	} else {
+		return fib(n - 1) + fib(n - 2)
+	}
+		
+}
+
 //递归调用的函数栈调用，出现了else路程本身不影响其流程
 func test2(n int)  {
 	if n > 2 {
@@ -28,4 +37,7 @@ func main()  {
 	test(n)
 	fmt.Println("------------------")
 	test2(n)
+	fmt.Println("------------------")
+	ret := fib(6)
+	fmt.Println(ret)
 }
