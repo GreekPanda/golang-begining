@@ -26,7 +26,7 @@ func monkeyEatPeach(n int)  int {
 	//猴子吃桃子的第N天的桃子数量: peach = (peach + 1) * 2 
 	if n > 10 || n < 1 {
 		fmt.Println("error n")
-		return -1
+		return 0
 	}
 	if n == 10 {
 		return 1
