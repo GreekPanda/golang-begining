@@ -72,6 +72,7 @@ func getSumSub(n1 int, n2 int) (sum int, sub int) {
 	return
 }
 
+//注意可变参数，一定放在形参列表中最后一个，否则会编译错误
 func sumArgs(n1 int, args...int) int {
 	sum := n1 
 	for i := 0; i < len(args); i++ {
