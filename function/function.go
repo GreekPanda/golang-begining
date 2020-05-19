@@ -13,6 +13,7 @@ func test(n int)  {
 	fmt.Println("output n=", n)
 }
 
+//递归调用的函数栈调用，出现了else路程本身不影响其流程
 func test2(n int)  {
 	if n > 2 {
 		n--
