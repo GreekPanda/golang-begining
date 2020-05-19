@@ -45,6 +45,10 @@ func test2(n int)  {
 	}
 }
 
+func test3(n *int)  {
+	*n = 20
+}
+
 func main()  {
 	var n int = 4
 	test(n)
@@ -57,5 +61,9 @@ func main()  {
 	ret2 := monkeyEatPeach(11)
 	fmt.Println(ret2)
 	fmt.Println("------------------")
+	//使用指针可修改值，其它的基本类型和数组都是船只
+	num := 30
+	test3(&num)
+	fmt.Println(num)
 
 }
