@@ -72,6 +72,14 @@ func getSumSub(n1 int, n2 int) (sum int, sub int) {
 	return
 }
 
+func sumArgs(n1 int, args...int) int {
+	sum := n1 
+	for i := 0; i < len(args); i++ {
+		sum += args[i]
+	}
+	return sum
+}
+
 func main()  {
 	var n int = 4
 	test(n)
@@ -116,4 +124,8 @@ func main()  {
 	ret6, ret7 := getSumSub(100, 50)
 	fmt.Printf("sum=%v, sub=%v\n", ret6, ret7)
 
+	fmt.Println("------------------")
+	//可变参数
+	ret8 := sumArgs(1,2,3,4)
+	fmt.Println(ret8)
 }
