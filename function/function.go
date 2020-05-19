@@ -22,6 +22,19 @@ func fib(n int) int  {
 		
 }
 
+func monkeyEatPeach(n int)  int {
+	//猴子吃桃子的第N天的桃子数量: peach = (peach + 1) * 2 
+	if n > 10 || n < 1 {
+		fmt.Println("error n")
+		return -1
+	}
+	if n == 10 {
+		return 1
+	} else {
+		return (monkeyEatPeach(n + 1) + 1) * 2
+	}
+}
+
 //递归调用的函数栈调用，出现了else路程本身不影响其流程
 func test2(n int)  {
 	if n > 2 {
@@ -40,4 +53,7 @@ func main()  {
 	fmt.Println("------------------")
 	ret := fib(6)
 	fmt.Println(ret)
+	fmt.Println("------------------")
+	ret2 := monkeyEatPeach(1)
+	fmt.Println(ret2)
 }
