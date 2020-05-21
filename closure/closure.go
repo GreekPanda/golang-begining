@@ -20,8 +20,27 @@ func add() func (int ) int {
 }
 
 
+//对比如果增加了两个变量
+
+func add1() func (int) int {
+	var n int = 100
+	var s string = "hello"
+	return func (x int) int  {
+		n += x
+		s += string(x)
+		fmt.Print(s)
+		return n	
+	}
+	
+}
+
 func main()  {
 	ret := add()
 	fmt.Println(ret(1))
 	fmt.Println(ret(100))
+	fmt.Println("------------------")
+	ret1 := add1()
+	fmt.Println(ret1(1))
+	fmt.Println(ret1(2))
+	fmt.Println(ret1(3))
 }
