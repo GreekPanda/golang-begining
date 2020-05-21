@@ -19,7 +19,7 @@ func main()  {
 	fmt.Println(sum(1,2))
 	fmt.Println("---------")
 	n1 := 10
-	n2 := 20
+	n2 := 20go
 	swap(&n1, &n2)
 	fmt.Printf("n1 = %v, n2 = %v\n", n1, n2)
 }
