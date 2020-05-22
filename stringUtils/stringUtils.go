@@ -107,5 +107,13 @@ func main()  {
 	fmt.Println(index2)
 
 
+	fmt.Println("------------")
+	//子串出现在字符串中的最后一个位置
+	index3 := strings.LastIndex("HELLO_abcabcabc", "abc")
+	index4 := strings.LastIndex("HELLO_abcabcabc", "Abc")
+	fmt.Println(index3)
+	//如果没有找到就返回-1
+	fmt.Println(index4)
+
 
 }
