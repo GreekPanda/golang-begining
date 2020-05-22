@@ -146,5 +146,15 @@ func main()  {
 	//将头尾的指定字符去掉
 	fmt.Println(strings.Trim("! hel lo%", " ! %"))
 	fmt.Println(strings.TrimSpace("! hel lo%"))
+	fmt.Println("------------")
+	//左右去掉
+	fmt.Println(strings.TrimLeft("! hel lo!", "!"))
+	fmt.Println(strings.TrimRight("! hel lo%", "%"))
+
+	fmt.Println("------------")
+	//以什么的大头，有大小写
+	fmt.Println(strings.HasPrefix("http://www.baidu.com", "http"))
+	fmt.Println(strings.HasPrefix("http://www.baidu.com", "HTTP"))
+	fmt.Println(strings.HasSuffix("http://www.baidu.com", "com"))
 
 }
