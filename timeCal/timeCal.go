@@ -3,7 +3,23 @@ package main
 import (
 	"fmt"
 	"time"
+	"strconv"
 )
+
+func funTimeRun() int64 {
+	var start int64
+	var end int64
+	var str string
+	//now := time.Now()
+	start = time.Now().Unix()
+	fmt.Println(start)
+	for i := 0; i < 100000; i++ {
+		str = str + " " + strconv.Itoa(i)
+	}
+	end = time.Now().Unix()
+	fmt.Println(end)
+	return end - start
+}
 
 func main()  {
 
@@ -51,5 +67,9 @@ func main()  {
 	//unix和unix纳秒的数
 	fmt.Println("Unix的时间秒:", now.Unix())
 	fmt.Println("Unix时间戳纳秒数：", now.UnixNano())
+
+	fmt.Println("----------------")
+	consume := funTimeRun()
+	fmt.Println(consume)
 
 }
