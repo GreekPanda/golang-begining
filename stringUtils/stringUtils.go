@@ -97,7 +97,15 @@ func main()  {
 	fmt.Println("abc" == "ABC")
 
 	fmt.Println("------------")
+	//返回子串在串中出现的第一个的下标
+	index := strings.Index("HELLO_abc", "abc")
+	index1 := strings.Index("HELLO_Abc", "abc")
+	index2 := strings.Index("HELLO_abcabcabc", "abc")
+	fmt.Println(index)
+	//区分大小写，如果不存在，就是返回-1
+	fmt.Println(index1)
+	fmt.Println(index2)
 
-	
+
 
 }
