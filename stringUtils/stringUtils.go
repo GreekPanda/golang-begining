@@ -85,4 +85,19 @@ func main()  {
 
 	fmt.Printf("%v\n", strings.Count("hellllllllo", "l"))
 
+	fmt.Println("------------")
+	//字符串比较
+	//等号区分大小写，如果不想区分大小写
+	//str8 := "abc"
+	//str9 := "ABC"
+
+	//true，不区分大小写
+	fmt.Println(strings.EqualFold("abc", "ABC"))
+	//false,区分大小写
+	fmt.Println("abc" == "ABC")
+
+	fmt.Println("------------")
+
+	
+
 }
