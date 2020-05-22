@@ -124,5 +124,27 @@ func main()  {
 	//如果全部替换，就把最后一个数修改为-1
 	fmt.Println(strings.Replace("HELLO_abcabcabc", "abc", "go", -1))
 
+	fmt.Println("------------")
+	//根据标识进行字符串的拆分
+	fmt.Println(strings.Split("hello world, this's is golang", " "))
+	fmt.Println(strings.Split("hello world, this's is golang", ","))
+	fmt.Println(strings.Split("hello world, this's is golang", "'"))
+	
+
+	fmt.Println("------------")
+	//字符串的大小写转换
+	fmt.Println(strings.ToUpper("abc"))
+	fmt.Println(strings.ToUpper("abcABcABC"))
+	fmt.Println(strings.ToLower("ABC"))
+	fmt.Println(strings.ToLower("ABCabcAbcABC"))
+
+	fmt.Println("------------")
+	//去掉字符串头尾的空格
+	fmt.Println(strings.TrimSpace("   hello, golang    "))
+
+	fmt.Println("------------")
+	//将头尾的指定字符去掉
+	fmt.Println(strings.Trim("! hel lo%", " ! %"))
+	fmt.Println(strings.TrimSpace("! hel lo%"))
 
 }
