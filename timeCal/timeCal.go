@@ -29,16 +29,16 @@ func main()  {
 	//sleep时间常量
 	//每隔一秒中就打印一个数字，打印到100就退出
 
-	for i := 1; i <= 10; i++ {
+	for i := 1; i <= 3; i++ {
 		fmt.Println(i)
 		time.Sleep(time.Second)
-		if i > 10 {
+		if i > 3 {
 			break
 		}
 	}
 
-	fmt.Printf("----------------")
-	
+	fmt.Println("----------------")
+
 	for i := 1; i <= 10; i++ {
 		fmt.Println(i)
 		time.Sleep(time.Millisecond * 100)
@@ -47,5 +47,9 @@ func main()  {
 		}
 	}
 
+	fmt.Println("----------------")
+	//unix和unix纳秒的数
+	fmt.Println("Unix的时间秒:", now.Unix())
+	fmt.Println("Unix时间戳纳秒数：", now.UnixNano())
 
 }
