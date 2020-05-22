@@ -115,5 +115,14 @@ func main()  {
 	//如果没有找到就返回-1
 	fmt.Println(index4)
 
+	fmt.Println("------------")
+	//替换子串
+	fmt.Println(strings.Replace("HELLO_abcabcabc", "abc", "go", 1))
+	fmt.Println(strings.Replace("HELLO_abcabcabc", "abc", "go", 3))
+	fmt.Println(strings.Replace("HELLO_abcabcabc", "abc", "go", 4))
+	fmt.Println(strings.Replace("HELLO_abcabcabc", "abc", "go", 10))
+	//如果全部替换，就把最后一个数修改为-1
+	fmt.Println(strings.Replace("HELLO_abcabcabc", "abc", "go", -1))
+
 
 }
